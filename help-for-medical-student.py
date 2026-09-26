@@ -14,7 +14,7 @@ st.write("Excel/CSV Data Bank se automatic load hone wali advanced test app with
 # CSV file read karne ka logic
 csv_file = "medical_data.csv"
 if os.path.exists(csv_file):
-    df = pd.read_csv(csv_file)
+    df = pd.read_csv(csv_file, on_bad_lines='skip')
 else:
     st.error("⚠️ Error: 'medical_data.csv' file nahi mili! Pehle CSV file banayein.")
     st.stop()
